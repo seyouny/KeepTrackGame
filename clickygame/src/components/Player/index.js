@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
 
-function FriendCard({handleClick, id, name, image}) {
+function Card({handleClick, id, name, image}) {
   return (
-    <div className="card" onClick={()=>handleClick(id)}>
+    <div className="card" onClick={handleClick}>
       <div className="img-container">
         <img alt={name} src={image} />
       </div>
@@ -18,4 +18,4 @@ function FriendCard({handleClick, id, name, image}) {
   );
 }
 
-export default FriendCard;
+export default Card;
