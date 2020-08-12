@@ -30,6 +30,8 @@ class App extends React.Component {
     if (this.state.score === 9){
       alert("You've reached the high score!")
       this.setState({score:0});
+      this.setState({highscore:9});
+
 
     }
     // this.setState({keeptrack:[...this.state.keeptrack,name]})
