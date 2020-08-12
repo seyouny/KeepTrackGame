@@ -22,13 +22,23 @@ class App extends React.Component {
     }
     alert("clicked")
     this.setState({randHaikyuu:haikyuu});
+    ///////////////////////////////////
+    this.setState({score:this.state.score + 1});
+    ////////////////////////////////////
+    this.randHaikyuu.push(haikyuu.id)
+    this.score++;
+    this.setState({score:this.score})
+    if (this.randHaikyuu.includes(haikyuu.id)){
+      this.setState({highscore:this.score})
+
+    }
   }
   
   render()
   {
     return (
     <Wrapper>
-      <Title score = {this.score} highscore = {this.highscore}>Clicky Game!</Title>
+      <Title score = {this.state.score} highscore = {this.state.highscore}>Clicky Game!</Title>
       <div onClick = {this.handleClick}> 
       {haikyuu.map(function(player){
        return <FriendCard
