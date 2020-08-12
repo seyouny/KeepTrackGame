@@ -8,9 +8,12 @@ class App extends React.Component {
   state = {
     score: 0,
     highscore: 0,
-    randHaikyuu:[]
+    randHaikyuu:haikyuu,
+    keeptrack:[],
+    id:''
   }
-  handleClick = () => {
+  handleClick = (id) => {
+    
     var rand;
     var x;
     var i;
@@ -20,18 +23,29 @@ class App extends React.Component {
         haikyuu[i] = haikyuu[rand];
         haikyuu[rand] = x;
     }
-    alert("clicked")
     this.setState({randHaikyuu:haikyuu});
     ///////////////////////////////////
     this.setState({score:this.state.score + 1});
     ////////////////////////////////////
-    this.randHaikyuu.push(haikyuu.id)
-    this.score++;
-    this.setState({score:this.score})
-    if (this.randHaikyuu.includes(haikyuu.id)){
-      this.setState({highscore:this.score})
+    
+    this.setState({keeptrack:[...this.state.keeptrack,id]})
+    if (this.state.keeptrack.includes(id))
+    {
+      this.setState({score:0})
+      this.setState({keeptrack:[]})
+      if (this.state.score > this.state.highscore)
+      {
+        this.setState({highscore:this.state.score});
+
+      }
 
     }
+
+    // this.setState({score:this.score})
+    // if (this.randHaikyuu.includes(haikyuu.id)){
+    //   this.setState({highscore:this.score})
+
+    // }
   }
   
   render()
@@ -39,17 +53,16 @@ class App extends React.Component {
     return (
     <Wrapper>
       <Title score = {this.state.score} highscore = {this.state.highscore}>Clicky Game!</Title>
-      <div onClick = {this.handleClick}> 
-      {haikyuu.map(function(player){
-       return <FriendCard
+      {this.state.randHaikyuu.map((player)=>{
+       return <FriendCard 
+       key = {player.id}
         id = {player.id}
         name={player.name}
         image={player.image}
+        handleClick= {this.handleClick}
       />
       })
-      }
-      </div>
-      
+      }      
     </Wrapper>
   );
 }

@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
 
-function Card({handleClick, id, name, image}) {
+function Card({name, id, handleClick, image}) {
   return (
-    <div className="card" onClick={handleClick}>
+    <div className="card" onClick={(event) => handleClick(event.target.id)}>
       <div className="img-container">
         <img alt={name} src={image} />
       </div>
