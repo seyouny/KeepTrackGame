@@ -12,7 +12,7 @@ class App extends React.Component {
     keeptrack:[],
     id:''
   }
-  handleClick = (id) => {
+  handleClick = id => {
     
     var rand;
     var x;
@@ -27,19 +27,27 @@ class App extends React.Component {
     ///////////////////////////////////
     this.setState({score:this.state.score + 1});
     ////////////////////////////////////
-    
-    this.setState({keeptrack:[...this.state.keeptrack,id]})
-    if (this.state.keeptrack.includes(id))
-    {
-      this.setState({score:0})
-      this.setState({keeptrack:[]})
-      if (this.state.score > this.state.highscore)
-      {
-        this.setState({highscore:this.state.score});
-
-      }
+    if (this.state.score === 9){
+      alert("You've reached the high score!")
+      this.setState({score:0});
 
     }
+    // this.setState({keeptrack:[...this.state.keeptrack,name]})
+    // alert(name)
+
+    ///////////////////////////////////
+    //PSEUDO CODE ==> needs to keep track of each card it clicks.
+    // if (this.state.keeptrack.includes(id))
+    // {
+    //   this.setState({score:0})
+    //   this.setState({keeptrack:[]})
+    //   if (this.state.score > this.state.highscore)
+    //   {
+    //     this.setState({highscore:this.state.score});
+
+    //   }
+
+    // }
 
     // this.setState({score:this.score})
     // if (this.randHaikyuu.includes(haikyuu.id)){
