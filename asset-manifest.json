@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/seyouny/KeepTrackGame/static/css/main.a2994a56.chunk.css",
+    "main.js": "/seyouny/KeepTrackGame/static/js/main.025f898b.chunk.js",
+    "main.js.map": "/seyouny/KeepTrackGame/static/js/main.025f898b.chunk.js.map",
+    "runtime-main.js": "/seyouny/KeepTrackGame/static/js/runtime-main.6ab23a9b.js",
+    "runtime-main.js.map": "/seyouny/KeepTrackGame/static/js/runtime-main.6ab23a9b.js.map",
+    "static/js/2.15409e2f.chunk.js": "/seyouny/KeepTrackGame/static/js/2.15409e2f.chunk.js",
+    "static/js/2.15409e2f.chunk.js.map": "/seyouny/KeepTrackGame/static/js/2.15409e2f.chunk.js.map",
+    "index.html": "/seyouny/KeepTrackGame/index.html",
+    "precache-manifest.a738260e0a1ca50a895b7c19adbdd9f5.js": "/seyouny/KeepTrackGame/precache-manifest.a738260e0a1ca50a895b7c19adbdd9f5.js",
+    "service-worker.js": "/seyouny/KeepTrackGame/service-worker.js",
+    "static/css/main.a2994a56.chunk.css.map": "/seyouny/KeepTrackGame/static/css/main.a2994a56.chunk.css.map",
+    "static/js/2.15409e2f.chunk.js.LICENSE.txt": "/seyouny/KeepTrackGame/static/js/2.15409e2f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ab23a9b.js",
+    "static/js/2.15409e2f.chunk.js",
+    "static/css/main.a2994a56.chunk.css",
+    "static/js/main.025f898b.chunk.js"
+  ]
+}
